@@ -1,0 +1,32 @@
+1.)
+a.) 262144000
+b.) max 262144000
+c.) 28
+d.) max 7340032000
+
+2.)
+a.) 107834590 - 10 = 107834590 // skip 0 to 9
+   107834590 - 256 = 107834334 // single indirect
+   107834334 -65536  = 107768798 //double indirect
+   107768798 - 16777216 = 91057118 //triple indirect
+   91057118 - 4294967296 = - // so read this block
+b.) dividing 07834590 by 1024 to get number of blocks to jump over, and 07834590%1024 to get position inside the block, looking in the main Memory for the next block and jumping to it, till 07834590/1024 blocks skipped, reading 07834590%1024 position
+
+3.)
+a.) 1kb/4byte = 256 Adress Blocks 2nd order
+    256 * 256 = 65536 Adress Blocks 3rd order
+    65536 * 256 = 16 777 216 Data Blocks
+    4294967296 byte Kapatizät
+
+    4kb/4byte = 1024
+    1024*1024 = 1048576
+    1048576 *1024 = 1073741824 Data Blocks
+    4398046511104 byte Kapazität
+
+b.) 4393751543808 byte  Kapazitätsunterschied
+
+4.)
+max size with 512byte blocks and 32 bit block numbers: max cap: 128GB -> a: It would be sufficient to keep a block size of 512bytes
+
+b: as max cap > 12 It would change nothing
+    
